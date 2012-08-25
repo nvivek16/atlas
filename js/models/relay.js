@@ -133,7 +133,7 @@ define([
             console.log("doing query..");
             $.getJSON(this.baseurl+'/details?lookup='+this.fingerprint, function(data) {
                 var relay = data.relays[0];
-                //console.log(data);
+                console.log(data);
                 var bw = relay.advertised_bandwidth;
                 relay.bandwidth = bw;
                 relay.family = relay.family ? relay.family : null;
@@ -142,6 +142,8 @@ define([
                 relay.countryname = CountryCodes[relay.country];
                 relay.uptime = model.parsedate(relay.last_restarted);
                 relay.uptime_hr = relay.uptime.hr;
+		relay.as_no = relay.as_number;
+		relay.as_name = relay.as_name;
                 model.set({badexit: false});
                 //console.log(relay.uptime.hrfull);
                 relay.uptime_hrfull = relay.uptime.hrfull;

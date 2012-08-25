@@ -56,6 +56,12 @@
     <dt><span class="tip" data-content="Country as found in a GeoIP database by resolving the relay's first onion-routing address." data-original-title="Country">Country</span></dt>
     <dd><%= relay.get('country') %></dd>
 
+    <dt><span class="tip" data-content="Autonomous Sytem Number" data-original-title="AS No">As No</span></dt>
+    <dd><%= _.escape(relay.get('as_no')) %></dd>
+
+    <dt><span class="tip" data-content="Autonomous System Name" data-original-title="AS Name">As Name</span></dt>
+    <dd><%= _.escape(relay.get('as_name')) %></dd>
+
     <dt><span class="tip" data-content="Date and time when the relay was last (re-)started." data-original-title="Last restarted">Last Restarted</span></dt>
     <dd><%= relay.get('last_restarted') %></dd>
 
@@ -68,7 +74,7 @@
 
     <dt><span class="tip" data-content="XXX" data-original-title="YYY">Platform</span></dt>
     <dd><%= _.escape(relay.get('platform')) %></dd>
-
+   
     </dl>
     </div>
     <div class="span4">
