@@ -133,7 +133,7 @@ define([
             console.log("doing query..");
             $.getJSON(this.baseurl+'/details?lookup='+this.fingerprint, function(data) {
                 var relay = data.relays[0];
-                console.log(data);
+                //console.log(data);
                 var bw = relay.advertised_bandwidth;
                 relay.bandwidth = bw;
                 relay.family = relay.family ? relay.family : null;
